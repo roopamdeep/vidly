@@ -1,8 +1,12 @@
 const express = require('express');
 const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
+
 const app = express();
 const genres = require('./routes/genres');
 const customers = require('./routes/customers');
+const movies = require('./routes/movies');
+const rentals = require('./routes/rentals');
 const mongoose = require('mongoose')
 
 
@@ -13,6 +17,8 @@ const mongoose = require('mongoose')
 app.use(express.json());
 app.use('/vidly.com/api/genres', genres);
 app.use('/vidly.com/api/customers', customers);
+app.use('/vidly.com/api/movies', movies);
+app.use('/vidly.com/api/rentals', rentals);
 //app.use(logger);
 //app.use('/', home);
 //---------------------------------------------------------------------

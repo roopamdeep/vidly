@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 //const Joi = require("joi");
-const {Customer,validate} = require('../modules/customers')
+const {Customer,validate} = require('../models/customer')
 
 const mongoose = require("mongoose");
 
@@ -24,13 +24,13 @@ router.post("/", async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(404).send(error.details[0].message);
   //console.log(req.body);
-  let customer = new Customer({
+  const customer = new Customer({
     name: req.body.name,
     phone: req.body.phone,
     isGold: req.body.isGold,
   });
   //console.log(customer)
-  customer = await customer.save();
+  await customer.save();
   res.send(customer);
 });
 //---------------------------------------------------------------------------
@@ -61,3 +61,4 @@ router.delete("/:id", async (req, res) => {
 //--------------------------------------------------------------------------
 
 module.exports = router;
+
