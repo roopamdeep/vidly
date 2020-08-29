@@ -1,7 +1,9 @@
+const auth = require("../middleware/auth");
 const express = require("express");
+
 const router = express.Router();
 //const Joi = require("joi");
-const {Genre,validate} = require('../models/genre')
+const { Genre, validate } = require("../models/genre");
 const mongoose = require("mongoose");
 
 //---------------------------------------------------------------------------
@@ -18,8 +20,8 @@ router.get("/:id", async (req, res) => {
   if (!genre) return res.status(404).send("Genre not in the list");
   res.send(genre);
 });
-//-----------------------------------------------------------------------------
-router.post("/", async (req, res) => {
+//---------------------------------------------------------------------------------------------------
+router.post("/", auth, async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(404).send(error.details[0].message);
   //console.log(req.body);
@@ -28,7 +30,7 @@ router.post("/", async (req, res) => {
   genre = await genre.save();
   res.send(genre);
 });
-//---------------------------------------------------------------------------
+//----------------------------------------------------------------------------------------------------
 router.put("/:id", async (req, res) => {
   const { error } = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message);
