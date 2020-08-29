@@ -1,5 +1,6 @@
 const express = require('express');
 const config = require("config");
+const config = require("jsonwebtoken");
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
 
