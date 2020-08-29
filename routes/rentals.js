@@ -12,7 +12,7 @@ Fawn.init(mongoose);
 //-------------------------------------------------------------------------
 router.get("/", async (req, res) => {
   res.send(await Rental.find().sort("-dateOut"));
-  console.log('hello')
+  //console.log('hello')
 });
 //-------------------------------------------------------------------------
 router.get("/:id", async (req, res) => {

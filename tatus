@@ -1,0 +1,48 @@
+[33mcommit 8d19e4a56f162bf8b43b107369c8ecb88f980eeb[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Roopamdeep Kaur <roopam_kaur@yahoo.in>
+Date:   Thu Aug 27 16:12:05 2020 -0400
+
+    Added Movies and Rental API
+
+[33mcommit 2de492e1717e1fc0f75a4bf3bfb7b3bdc66957e4[m
+Author: Roopamdeep Kaur <roopam_kaur@yahoo.in>
+Date:   Tue Aug 25 22:27:41 2020 -0400
+
+    Added Customers API
+
+[33mcommit 640ed9f8da44e50f3903c496369a8129896232ee[m
+Author: Roopamdeep Kaur <roopam_kaur@yahoo.in>
+Date:   Tue Aug 25 19:04:36 2020 -0400
+
+    added persistence to genres API
+
+[33mcommit dfdfcf1ef0a50a654594db89cc7c78963be8c631[m
+Author: Roopamdeep Kaur <roopam_kaur@yahoo.in>
+Date:   Sun Aug 23 12:46:24 2020 -0400
+
+    added routes, middleware
+
+[33mcommit e0380e862572ad7997e693e27b4d4cfaf52652e1[m
+Merge: 330beac 4da3104
+Author: Roopamdeep Kaur <roopam_kaur@yahoo.in>
+Date:   Thu Aug 20 17:06:54 2020 -0400
+
+    Merge branch 'master' of https://github.com/roopamdeep/vidly into master
+
+[33mcommit 4da31048869a2dd49b67f46cd1bc8dd801d6a907[m
+Author: Roopamdeep Kaur <35434493+roopamdeep@users.noreply.github.com>
+Date:   Thu Aug 20 17:03:02 2020 -0400
+
+    Delete README.md
+
+[33mcommit 699685eb82c0edc599624bfe767da2db4d74b31c[m
+Author: Roopamdeep Kaur <35434493+roopamdeep@users.noreply.github.com>
+Date:   Thu Aug 20 15:35:27 2020 -0400
+
+    Initial commit
+
+[33mcommit 330beac43d2b58a0391bfc9bf68e328426cf7b92[m
+Author: Roopamdeep Kaur <roopam_kaur@yahoo.in>
+Date:   Thu Aug 20 15:34:08 2020 -0400
+
+    created endpoints for this application
