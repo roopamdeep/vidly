@@ -1,5 +1,10 @@
+const config = require("config");
+const jwt = require('jsonwebtoken');
+const { request } = require("express");
 function admin(req,res,next){
-    console.log("Logging");
+  
+    if(!req.user.isAdmin) return res.status(403).send('Access Denied');
+
     next();
 }
 module.exports = admin;
