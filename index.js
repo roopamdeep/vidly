@@ -5,10 +5,12 @@ const jwt = require("jsonwebtoken");
 
 
 const app = express();
+require("./startup/prod");
 require("./startup/logging");
 require("./startup/routes")(app);
 require("./startup/db")();
 require("./startup/config")();
+
 require("./startup/validation")();
 
 // process.on('uncaughtException',(ex)=>{
